@@ -1,0 +1,41 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class UniqueSet {
+    private Set<Integer> elements;
+
+    public UniqueSet() {
+        this.elements = new HashSet<>();
+    }
+
+    public void add(int num) {
+        elements.add(num);
+    }
+
+    public void remove(int num) {
+        elements.remove(num);
+    }
+
+    public boolean contains(int num) {
+        return elements.contains(num);
+    }
+
+    public int size() {
+        return elements.size();
+    }
+
+    public boolean isEmpty() {
+        return elements.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        UniqueSet uniqueSet = new UniqueSet();
+        uniqueSet.add(5);
+        uniqueSet.add(7);
+        System.out.println(uniqueSet.contains(5));  // true
+        System.out.println(uniqueSet.size());        // 2
+        uniqueSet.remove(5);
+        System.out.println(uniqueSet.size());        // 1
+        System.out.println(uniqueSet.isEmpty());     // false
+    }
+}
